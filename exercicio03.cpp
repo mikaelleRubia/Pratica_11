@@ -7,8 +7,8 @@ using namespace std;
 int main()
 {
     string resposta_; 
-    int temp;
-    int vet[10];
+    float temp;
+    float vet[10];
 
 
 
