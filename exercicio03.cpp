@@ -6,11 +6,9 @@ using namespace std;
 
 int main()
 {
-    string resposta_; 
+
     float temp;
     float vet[10];
-
-
 
     cout << " Digite 10 numeros" << endl;
     for(int i = 0; i <10; i++) {
@@ -20,10 +18,11 @@ int main()
     cout  << endl;
     cout << " ============= Numeros =============" << endl;
 
-    for(int i = 0; i <10; i++) {
-        cout << " Numero: " << vet[i];
+    for (auto x: vet) cout << " Numero: " << x;
+    // for(int i = 0; i <10; i++) {
+    //     cout << " Numero: " << vet[i];
       
-    }
+    // }
     cout  << endl;
 
     // logica para ordenação 
@@ -33,17 +32,12 @@ int main()
                 temp = vet[i];
                 vet[i] = vet[j];
                 vet[j] = temp;
+            }
         }
-
-        }
-      
     }
     cout << " ============= Numeros ordenados =============" << endl;
 
-    for(int i = 0; i <10; i++) {
-        cout << " Numero novo ->:" << vet[i];
-      
-    }
+    for (auto x: vet) cout << " Numero: " << x;
     
 
 }
