@@ -4,9 +4,9 @@
 
 using namespace std;
 
-int  intercala(int tam1, vector<int> vet1,vector<int> vet2,  int tam2){
+int  intercala_char(int tam1, vector<char> vet1,vector<char> vet2,  int tam2){
     int tamanho_vets = tam1 + tam2;
-    vector<int> vet3;
+    vector<char> vet3;
 
     for (int i = 0; i < tamanho_vets/2; i++) {
         vet3.push_back(vet1[i]);
@@ -14,19 +14,19 @@ int  intercala(int tam1, vector<int> vet1,vector<int> vet2,  int tam2){
 
     }
 
-    for (auto x: vet3) cout << " Numero: " << x << endl;
+    for (auto x: vet3) cout << " letra: " << x << endl;
 
 }
 
 int main()
 {
-    vector<int> vet1 {1, 2, 3, 4, 9};
-    vector<int> vet2 {5, 11, 5, 14, 20}; 
+    vector<char> vet1 {'A', 'B', 'D', 'E'};
+    vector<char> vet2 {'P', 'K', 'A',}; 
 
     int tam1= vet1.size(); 
     int tam2= vet2.size(); 
 
-    intercala(tam1, vet1, vet2, tam2);
+    intercala_char(tam1, vet1, vet2, tam2);
 
     return 0;
 }
