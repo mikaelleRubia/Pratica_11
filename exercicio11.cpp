@@ -27,7 +27,7 @@ string codificarcao (string frase){
 
 
 
-string descodificarcao (string frase){
+string decodificarcao (string frase){
     string frase_nova ="";
     for (char x: frase){
         if(isalpha(x)){
@@ -56,8 +56,8 @@ int main() {
     frase_codificada = codificarcao(nome);
     cout << "codificada: " <<frase_codificada << endl;
 
-    frase_codificada = descodificarcao(frase_codificada);
-    cout << "descodificada: " << frase_codificada << endl;
+    frase_codificada = decodificarcao(frase_codificada);
+    cout << "decodificada: " << frase_codificada << endl;
 
     return 0;
 }
