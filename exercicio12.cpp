@@ -4,29 +4,27 @@
 
 using namespace std;
 
-int  intercala_char(int tam1, vector<char> vet1,vector<char> vet2,  int tam2){
-    int tamanho_vets = tam1 + tam2;
-    vector<char> vet3;
+void compara_string(string nome1, string nome2,string nome){
 
-    for (int i = 0; i < tamanho_vets/2; i++) {
-        vet3.push_back(vet1[i]);
-        vet3.push_back(vet2[i]);
+    for (auto x: nome1) 
+    for (auto y: nome2)
 
+    if(x == y){
+        nome +=x;
     }
 
-    for (auto x: vet3) cout << " letra: " << x << endl;
-
+    cout << " letra: " << nome << endl;
 }
 
 int main()
 {
-    vector<char> vet1 {'A', 'B', 'D', 'E'};
-    vector<char> vet2 {'P', 'K', 'A',}; 
+    string nome_a = "CASDWQTR";
+    string nome_b = "TRSAY";
+    string nome= "";
 
-    int tam1= vet1.size(); 
-    int tam2= vet2.size(); 
 
-    intercala_char(tam1, vet1, vet2, tam2);
+
+    compara_string( nome_a,nome_b, nome);
 
     return 0;
 }

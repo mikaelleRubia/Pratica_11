@@ -10,8 +10,7 @@ int main() {
     getline(cin, nome);
 
     for (int i = 0; i < nome.length(); i++) {
-            char caracter = nome[i] + 1;
-            cout << caracter;
+            cout << nome.at(i) << endl;
 
     }
 
