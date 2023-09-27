@@ -1,32 +1,38 @@
 #include <iostream>
-#include <string>
-#include <vector>
 
 using namespace std;
 
-int  intercala(int tam1, vector<int> vet1,vector<int> vet2,  int tam2){
-    int tamanho_vets = tam1 + tam2;
-    vector<int> vet3;
+void intercala(int *vet1, int tam1, int *vet2, int tam2) {
+    int *tamanho_vets = new int[tam1 + tam2];
+    int i = 0, j = 0, k = 0;
 
-    for (int i = 0; i < tamanho_vets/2; i++) {
-        vet3.push_back(vet1[i]);
-        vet3.push_back(vet2[i]);
-
+    while (i < tam1 && j < tam2) {
+        tamanho_vets[k++] = vet1[i++];
+        tamanho_vets[k++] = vet2[j++];
     }
 
-    for (auto x: vet3) cout << " Numero: " << x << endl;
+    while (i < tam1) {
+        tamanho_vets[k++] = vet1[i++];
+    }
 
+    while (j < tam2) {
+        tamanho_vets[k++] = vet2[j++];
+    }
+
+    for (int i = 0; i < tam1 + tam2; i++) {
+        cout << tamanho_vets[i] << " ";
+    }
 }
 
-int main()
-{
-    vector<int> vet1 {1, 2, 3, 4, 9};
-    vector<int> vet2 {5, 11, 5, 14, 20}; 
+int main() {
+    int tam1 = 3;
+    int vet1[] = {1, 3, 5};
 
-    int tam1= vet1.size(); 
-    int tam2= vet2.size(); 
+    int tam2 = 6;
+    int vet2[] = {2, 4, 6, 8, 9, 50};
 
-    intercala(tam1, vet1, vet2, tam2);
+    intercala(vet1, tam1, vet2, tam2);
+
 
     return 0;
 }
