@@ -1,0 +1,13 @@
+Coesão refere-se ao grau em que as responsabilidades de uma função ou módulo estão relacionadas e focadas em realizar 
+uma única tarefa ou funcionalidade específica. A função maxmin parece ter uma alta coesão, pois sua única responsabilidade é 
+encontrar o valor máximo e mínimo em um vetor. Essa função não lida com tarefas adicionais ou unrelated (não relacionadas).
+
+Acoplamento refere-se à dependência entre módulos ou funções. Um baixo acoplamento é geralmente desejável, pois implica
+que as partes do código estão fracamente ligadas e podem ser modificadas independentemente umas das outras. 
+A função maxmin não possui um acoplamento direto com outras funções ou módulos externos.
+Ela aceita argumentos para entrada e retorna resultados, de modo que não está fortemente acoplada a outras partes do código. 
+Isso é uma boa prática, pois torna a função mais reutilizável e fácil de manter.
+
+Em resumo, a função maxmin exibe uma alta coesão, pois executa uma tarefa específica, e tem um baixo acoplamento,
+ pois não depende diretamente de outras partes do código. Essas características são geralmente consideradas boas 
+ práticas de design de funções e módulos.

@@ -1,3 +1,2 @@
-*.txt
-*.vscode
-*/output
+.vscode
+/output
