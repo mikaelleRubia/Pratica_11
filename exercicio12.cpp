@@ -4,38 +4,24 @@
 
 using namespace std;
 
-void compara_string(string nome1, string nome2){
-    int tam1 = nome1.size();
-    int tam2 = nome2.size();
-    string nome;
-    string  tamanho_vets;
-    tamanho_vets.resize(tam1 + tam2);
+void compara_string(string nome1, string nome2, string nome3){
 
-    int i = 0, j = 0, k = 0;
-    while (i < tam1 && j < tam2) {
-        tamanho_vets[k++] = nome1[i++];
-        tamanho_vets[k++] = nome2[j++];
-    }
-
-    while (i < tam1) {
-        tamanho_vets[k++] = nome1[i++];
-    }
-
-    while (j < tam2) {
-        tamanho_vets[k++] = nome2[j++];
-    }
-
-    for (int i = 0; i < tam1 + tam2; i++) {
-        cout << tamanho_vets[i] << " ";
-    }
+    for (char caractere : nome1) {
+    
+            if (nome2.find(caractere) != string::npos && nome3.find(caractere) == string::npos) {
+                nome3 += caractere;
+            }
+        }
+    cout << nome3<< endl;
 }
 
 int main()
 {
-    string nome_a = "CASDWQTR";
-    string nome_b = "TRSAY";
+    string nome_a = "AW";
+    string nome_b = "TRSAYHGFDJMNYHW";
+    string nome_c;
 
-    compara_string( nome_a,nome_b);
+    compara_string( nome_a,nome_b,nome_c);
 
     return 0;
 }
