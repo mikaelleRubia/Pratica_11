@@ -13,7 +13,7 @@ void  multiplica_por_n(vector<int> vet1,int qtde, int n){
     }
 
     for (int i = 0; i < qtde; i++) {
-        cout <<"numero "<< i<< " X" << " 5:"<<vet1[i]<<endl;
+        cout <<"numero "<< i<< " X " << n << ": " <<vet1[i]<<endl;
 
     }
 
@@ -23,7 +23,7 @@ int main()
 {
     vector<int> vet1 {};
 
-    multiplica_por_n(vet1,7, 5);
+    multiplica_por_n(vet1,7, 9);
 
     return 0;
 }
